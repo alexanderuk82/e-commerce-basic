@@ -1,0 +1,106 @@
+.item {
+  background-color: rgb(196, 255, 204);
+}
+.homeSlider > .owl-stage-outer {
+  height: auto;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  span {
+    background: hsl(0, 0%, 100%) !important;
+  }
+}
+.owl-dot.active {
+  width: 2.7rem;
+  margin-right: 1.8rem;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+  background: hsl(0, 0%, 100%);
+  width: 100%;
+}
+.homeSlider > .owl-carousel .owl-item img {
+  min-width: auto;
+}
+
+@mixin btnSection($design, $section) {
+  text-decoration: none;
+
+  @if (($design == dark) and ($section == slider)) {
+    display: grid;
+    column-gap: 0.6rem;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    justify-content: center;
+    color: #fff;
+    grid-template-columns: 2.4fr min-content;
+    background-color: $dark-color;
+    width: 14rem;
+    margin-top: 2.5rem;
+    font-weight: map-get($font-weight, bold);
+
+    &:hover {
+      background-color: rgba($dark-color, 0.96);
+    }
+  }
+
+  @if (($design == trans) and ($section == banner)) {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 1rem 0;
+
+    img {
+      margin-left: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    &::after {
+      content: '';
+      display: flex;
+      margin-top: 3.2rem;
+      margin-left: -5.4rem;
+      margin-right: auto;
+      border: 1.8px solid #fff;
+      transform: scaleX(0);
+      transition: all 0.3s;
+    }
+
+    &:hover::after {
+      transform: scaleX(30);
+    }
+
+    &:hover img {
+      margin-left: 1rem;
+    }
+  }
+
+  @if (($design == outline) and ($section == banner)) {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 1.2rem 1.5rem;
+    font-weight: 700;
+    border: 2px solid $primary-color;
+    width: 56%;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+    img {
+      margin-left: 1.1rem;
+    }
+  }
+}

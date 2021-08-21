@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="50" viewBox="0 0 196 50">
+  <g id="Logo" transform="translate(-140 -93)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="50" height="50" rx="7" transform="translate(140 93)" fill="#26c"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="13" height="13" rx="3" transform="matrix(0.995, -0.105, 0.105, 0.995, 171.356, 126.715)" fill="#fff"/>
+    <text id="imarks" transform="translate(209 130)" fill="#0e0e0d" font-size="33" font-family="Raleway-Black, Raleway" font-weight="800"><tspan x="0" y="0">IMARKS</tspan></text>
+  </g>
+</svg>

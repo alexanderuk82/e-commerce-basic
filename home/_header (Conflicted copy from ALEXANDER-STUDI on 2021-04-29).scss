@@ -1,0 +1,61 @@
+.header {
+  &__topBar {
+    display: flex;
+    @extend %paddings;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ccc;
+
+    a:link {
+      text-decoration: none;
+      color: $body-text;
+      transition: color 0.1s;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    &__message {
+    }
+
+    &__box-dropdown {
+      display: flex;
+      //   flex-direction: column;
+      //   align-items: center;
+
+      &::after {
+        content: '';
+        display: inline;
+        background-image: url(../img/chevron-down.svg);
+        height: 3rem;
+        width: 3rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      ul {
+        box-shadow: 0 1rem 2.5rem rgb(81 80 80 / 18%);
+        padding: 1rem;
+        position: absolute;
+        display: none;
+      }
+    }
+
+    &__information {
+    }
+
+    &__currencies {
+      transition: all 0.3s ease;
+    }
+
+    &__currencies:hover ul {
+      display: block;
+      top: 3rem;
+      animation: topBottom 0.9s;
+    }
+  }
+}

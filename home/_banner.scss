@@ -1,0 +1,87 @@
+.banner {
+  margin: 6rem 0rem;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+  &__categories {
+    width: 100%;
+    position: relative;
+  }
+
+  #categories--special {
+    // left: 16rem;
+
+    // @include responsive(tabPort) {
+    //   left: 21rem;
+    // }
+
+    @include responsive(desktop) {
+      left: 15rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.43rem;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 7vw;
+
+    @include responsive(tabPort) {
+      left: 3vw;
+    }
+  }
+
+  &__h2 {
+    @include h2Section(banner);
+
+    &--special {
+      @include h2Section(special);
+    }
+  }
+
+  &__comment {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.5rem;
+
+    &--special {
+      font-family: 'Segoe Script Regular';
+      font-size: 3.4rem;
+      letter-spacing: 0.2rem;
+      color: #fff;
+      line-height: 1;
+    }
+
+    &--special2 {
+      color: $primary-color;
+      font-size: 5rem;
+      text-transform: capitalize;
+      font-weight: map-get($font-weight, bold);
+      line-height: 5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__separator {
+    width: 4rem;
+    height: 0.3rem;
+    background-color: #fff;
+    display: block;
+  }
+
+  &__btn {
+    @include btnSection(trans, banner);
+
+    &--special {
+      @include btnSection(outline, banner);
+    }
+  }
+}

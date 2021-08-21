@@ -1,0 +1,25 @@
+.information {
+  &__boxes {
+    background: #fff;
+    padding: 2rem 4rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 1rem 8.3rem rgb(0 0 0 / 7%);
+    margin: 3rem 1.5rem;
+    display: grid;
+    justify-items: center;
+
+    @include responsive(tabSmall) {
+      padding: 2rem;
+    }
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+  &__title {
+    font-weight: map-get($font-weight, bold);
+    color: $dark-color;
+    font-size: 1.6rem;
+  }
+}
